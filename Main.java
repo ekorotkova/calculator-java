@@ -54,9 +54,9 @@ class SwitchCase {
         String s = symbols[1];
 
         if (a < 1 || a > 10) {
-            throw new Exception("Число не входит в диапозон допустимых!");
+            throw new Exception("Число не входит в диапазон допустимых!");
         } else if (b < 1 || b > 10) {
-            throw new Exception("Число не входит в диапозон допустимых!");
+            throw new Exception("Число не входит в диапазон допустимых!");
         } else {
 
         }
