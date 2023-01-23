@@ -13,7 +13,7 @@ public class Main {
 
         // input string
         Scanner strIn = new Scanner(System.in);
-        System.out.println("Input: ");
+        // System.out.println("Input: ");
         String sInputLine = strIn.nextLine();
         strIn.close();
 
@@ -39,19 +39,19 @@ public class Main {
             case "+":
                 int resultSm = a + b;
                 result = String.valueOf(resultSm);
-                return ("Output: " + result); // return result string
+                return (result); // return result string
             case "-":
                 int resultS = a - b;
                 result = String.valueOf(resultS);
-                return ("Output: " + result); // return result string
+                return (result); // return result string
             case "*":
                 int resultM = a * b;
                 result = String.valueOf(resultM);
-                return ("Output: " + result); // return result string
+                return (result); // return result string
             case "/":
                 int resultD = a / b;
                 result = String.valueOf(resultD);
-                return ("Output: " + result); // return result string
+                return (result); // return result string
             default:
                 throw new Exception("Операция не может быть выполнена!");
         }
