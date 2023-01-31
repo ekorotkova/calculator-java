@@ -7,14 +7,26 @@ public class Main {
      * @return
      * @throws Exception
      **/
+
     private static String result;
+    private static String sInputLine;
+
+    /**
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
+        System.out.println(calc(sInputLine));
+
+    }
 
     public static String calc(String input) throws Exception {
 
         // input string
         Scanner strIn = new Scanner(System.in);
+        strIn = new Scanner(System.in);
         // System.out.println("Input: ");
-        String sInputLine = strIn.nextLine();
+        sInputLine = strIn.nextLine();
         strIn.close();
 
         // condition
@@ -55,10 +67,5 @@ public class Main {
             default:
                 throw new Exception("Операция не может быть выполнена!");
         }
-    }
-
-    public static void main(String[] args) throws Exception {
-        System.out.println(calc(result));
-
     }
 }
