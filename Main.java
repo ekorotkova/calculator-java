@@ -16,7 +16,9 @@ public class Main {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        System.out.println(calc(sInputLine));
+        System.out.println("Please enter 2 numbers and the operation sign in the format a + b: ");
+        calc(sInputLine);
+        System.out.println("Result: " + result);
 
     }
 
