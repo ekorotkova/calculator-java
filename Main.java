@@ -16,18 +16,15 @@ public class Main {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
+        Scanner strIn = new Scanner(System.in);
         System.out.println("Please enter 2 numbers and the operation sign in the format [a + b]: ");
+        strIn = new Scanner(System.in);
+        sInputLine = strIn.nextLine();
+        strIn.close();
         calc(sInputLine);
     }
 
     public static String calc(String input) throws Exception {
-
-        // input string
-        Scanner strIn = new Scanner(System.in);
-        strIn = new Scanner(System.in);
-        sInputLine = strIn.nextLine();
-        strIn.close();
-
         // condition
         String[] symbols = sInputLine.split(" ");
         String num1 = symbols[0];
