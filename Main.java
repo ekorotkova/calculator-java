@@ -1,6 +1,8 @@
 import java.text.ParseException;
 import java.util.Scanner;
 
+import javax.sound.midi.SysexMessage;
+
 public class Main {
 
     /**
@@ -30,20 +32,23 @@ public class Main {
     public static String calc(String input) throws Exception {
         // condition
         String[] symbols = sInputLine.split(" ");
-        String num1 = symbols[0];
-        String num2 = symbols[2];
-        String s = symbols[1];
 
-        if (symbols.length != 3) {
+        if (symbols.length == 1) {
+            throw new Exception("Не является выражением!");
+        } else if (symbols.length != 3) {
             throw new Exception("Выражение задано неверно!");
         } else {
         }
+
+        String num1 = symbols[0];
+        String num2 = symbols[2];
+        String s = symbols[1];
 
         try {
             a = Integer.parseInt(num1);
             b = Integer.parseInt(num2);
         } catch (Exception e) {
-            System.out.println(e);
+            throw new Exception("Выражение не удовлетворяет заданному условию!");
         }
 
         if (a < 1 || a > 10) {
