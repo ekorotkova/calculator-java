@@ -1,3 +1,4 @@
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +11,8 @@ public class Main {
 
     private static String result;
     private static String sInputLine;
+    private static int a;
+    private static int b;
 
     /**
      * @param args
@@ -31,15 +34,23 @@ public class Main {
         String num2 = symbols[2];
         String s = symbols[1];
 
-        int a = Integer.parseInt(num1);
-        int b = Integer.parseInt(num2);
+        if (symbols.length != 3) {
+            throw new Exception("Выражение задано неверно!");
+        } else {
+        }
+
+        try {
+            a = Integer.parseInt(num1);
+            b = Integer.parseInt(num2);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
         if (a < 1 || a > 10) {
             throw new Exception("Число не входит в диапазон допустимых!");
         } else if (b < 1 || b > 10) {
             throw new Exception("Число не входит в диапазон допустимых!");
         } else {
-
         }
         // return result
         switch (s) {
